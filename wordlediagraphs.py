@@ -77,13 +77,13 @@ df = pd.DataFrame(data={'Odds': wordle.blenddict})
 table = wordle.blendtable
 
 
-solutions_numbers = CountLetters(solutions).SumTables
+#solutions_numbers = CountLetters(solutions).SumTables
 #lst = ['1st', '2nd', '3rd', '4th', '5th']
 
 with pd.ExcelWriter("results.xlsx") as Writer:
     df.to_excel(Writer, sheet_name="blends")
     wordle.blendtable.to_excel(Writer, sheet_name="blendtable")
-    solutions_numbers.to_excel(Writer, sheet_name="overallodds")
+    #solutions_numbers.to_excel(Writer, sheet_name="overallodds")
     #viableWords.to_excel(Writer, sheet_name="Viable Words")
 
 #    for t in lst:
